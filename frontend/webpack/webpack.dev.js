@@ -22,8 +22,19 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.css$/i,
+        test: /\.css$/i, // bootstrap 때문에 필요함
+        exclude: /\.module\.css$/i,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.module\.css$/i,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: { modules: { localIdentName: "[local]--[md4:hash:7]" } },
+          },
+        ],
       },
     ],
   },
