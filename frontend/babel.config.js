@@ -1,9 +1,9 @@
 module.exports = {
   env: {
-    dev: {
+    development: {
       presets: ["@babel/preset-react", "@babel/preset-env"],
     },
-    prod: {
+    production: {
       presets: [
         "@babel/preset-react",
         ["@babel/preset-env", { useBuiltIns: "usage", corejs: 3, debug: true }],

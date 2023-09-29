@@ -11,7 +11,6 @@ module.exports = {
     node: true,
     es6: true,
   },
-  ignorePatterns: ["/webpack/*.js"],
   settings: { react: { version: "detect" } },
   extends: [
     "eslint:recommended",
