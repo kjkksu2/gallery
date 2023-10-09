@@ -1,33 +1,24 @@
 import React from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import classes from "./App.module.css";
+import "./App.scss";
+import Root from "../routes/Root";
+import Home from "../routes/Home";
+import Login from "../routes/Login";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/login", element: <Login /> },
+    ],
+  },
+]);
 
 const App = () => {
-  console.log(process.env.NODE_ENV);
-  return (
-    <nav className="navbar" style={{ backgroundColor: "#e3f2fd" }}>
-      <ul className="nav">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">
-            Active
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">
-            Link
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">
-            Link
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link">Disabled</a>
-        </li>
-      </ul>
-    </nav>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;

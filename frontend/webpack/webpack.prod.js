@@ -25,20 +25,9 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.css$/i, // bootstrap 때문에 필요함
-        exclude: /\.module\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
-      },
-      {
-        test: /\.module\.css$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: { modules: { localIdentName: "[hash:base64]" } },
-          },
-          "postcss-loader",
-        ],
+        test: /\.scss$/i,
+        exclude: /node_modules/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
     ],
   },

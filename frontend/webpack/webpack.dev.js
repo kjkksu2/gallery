@@ -6,7 +6,7 @@ const common = require("./webpack.common");
 module.exports = merge(common, {
   mode: "development",
   devServer: {
-    static: { directory: path.join(__dirname, "./dist") },
+    static: { directory: path.join(__dirname, "../dist") },
     devMiddleware: {
       index: "index.html",
       writeToDisk: true,
@@ -22,19 +22,9 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.css$/i, // bootstrap 때문에 필요함
-        exclude: /\.module\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.module\.css$/i,
-        use: [
-          "style-loader",
-          {
-            loader: "css-loader",
-            options: { modules: { localIdentName: "[local]--[md4:hash:7]" } },
-          },
-        ],
+        test: /\.scss$/i,
+        exclude: /node_modules/,
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },

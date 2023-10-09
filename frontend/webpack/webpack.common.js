@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
   entry: "./src/index.js",
   resolve: {
-    extensions: [".js", ".jsx"], // file extension 생략 가능
+    extensions: [".js", ".jsx", "..."], // file extension 생략 가능
   },
   output: {
     path: path.join(__dirname, "../dist"),
