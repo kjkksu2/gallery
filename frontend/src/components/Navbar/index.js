@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 
+import "./styles.scss";
+
 const Navbar = () => {
+  useEffect(() => {
+    const navbar = document.querySelector(".navbar");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("show-border");
+      } else {
+        navbar.classList.remove("show-border");
+      }
+    });
+  }, []);
+
   return (
     <div
-      className="navbar navbar-expand-lg sticky-top bg-dark"
+      className="navbar navbar-expand-lg fixed-top bg-dark"
       data-bs-theme="dark"
     >
       <div className="container">

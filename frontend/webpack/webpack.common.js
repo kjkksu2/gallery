@@ -9,7 +9,6 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, "../dist"),
-    clean: true,
   },
   module: {
     rules: [

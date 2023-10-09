@@ -5,6 +5,7 @@ import "./App.scss";
 import Root from "../routes/Root";
 import Home from "../routes/Home";
 import Login from "../routes/Login";
+import Privacy from "../routes/Privacy";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/login", element: <Login /> },
+      { path: "/legal/privacy", element: <Privacy /> },
     ],
   },
 ]);

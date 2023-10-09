@@ -2,14 +2,24 @@
 $font-family-sans-serif: "Open Sans", sans-serif;
 
 // Colors
-$primary: #c167ef;
-$secondary: #10bcee;
-$dark: #2b3041;
-$light: #f3f6f9;
+$primary: #f8b547;
+$secondary: #35353a;
+$light: #fbf9f5;
 
 // Navbar
 $navbar-padding-y: 1rem;
-$navbar-dark-hover-color: $secondary;
+$navbar-dark-hover-color: $primary;
+
+// Buttons
+$btn-padding-y: 10px;
+$btn-padding-y-lg: $btn-padding-y;
+$btn-padding-y-sm: $btn-padding-y;
+
+$btn-padding-x: 30px;
+$btn-padding-x-lg: $btn-padding-x;
+$btn-padding-x-sm: $btn-padding-x;
+
+$navbar-toggler-border-radius: 5px;
 
 // Spacing
 $spacer: 1rem !default;
