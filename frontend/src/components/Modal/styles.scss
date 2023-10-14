@@ -1,0 +1,19 @@
+// modal이 열릴 때마다 scrollbar가 사라지고, navbar가 움직여서 설정함.
+body {
+  overflow: initial !important;
+  padding: 0 !important;
+}
+
+.navbar {
+  padding-right: 0 !important;
+}
+
+.modal {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .modal-dialog {
+  max-width: 800px;
+}

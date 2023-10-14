@@ -7,11 +7,9 @@ import Background from "../components/Background";
 const Root = () => {
   return (
     <>
+      <Background />
       <Navbar />
-      <main className="vh-100 position-relative text-white py-7">
-        <Background />
-        <Outlet />
-      </main>
+      <Outlet />
     </>
   );
 };

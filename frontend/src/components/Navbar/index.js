@@ -17,7 +17,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div
+    <nav
       className="navbar navbar-expand-lg fixed-top bg-dark"
       data-bs-theme="dark"
     >
@@ -52,7 +52,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/login"
+                to="/users/login"
                 className={({ isActive }) =>
                   isActive ? "nav-link active" : "nav-link"
                 }
@@ -64,7 +64,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

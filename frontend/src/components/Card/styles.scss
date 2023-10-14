@@ -1,0 +1,42 @@
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 15px var(--bs-primary);
+  }
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card .card-body {
+  padding: 0.5rem 0 !important;
+}
+
+@media (min-width: 993px) {
+  .card img {
+    height: 18vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .card img {
+    height: 23vw;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .card img {
+    height: 40vw;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+  .card img {
+    height: 45vw;
+  }
+}

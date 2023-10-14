@@ -1,5 +1,20 @@
-.form {
+.login .form {
   background: transparent;
   border: 1px solid var(--bs-white);
   backdrop-filter: blur(2px);
+}
+
+.login .local-login-options a {
+  text-decoration: none;
+}
+
+$sns-login-google-color: #0d6efd;
+.login .sns-login-google {
+  color: $sns-login-google-color !important;
+  border: 1px solid $sns-login-google-color !important;
+
+  &:hover {
+    background: $sns-login-google-color !important;
+    color: white !important;
+  }
 }

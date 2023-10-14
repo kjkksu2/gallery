@@ -10,7 +10,6 @@ module.exports = merge(common, {
     client: { overlay: true },
     port: 3000,
     hot: true,
-    open: true,
   },
   output: {
     filename: "bundle.js",

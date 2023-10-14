@@ -1,7 +1,15 @@
 import React from "react";
 
+import CardList from "../components/CardList";
+
 const Home = () => {
-  return <h1>Home</h1>;
+  return (
+    <main className="home py-7">
+      <section className="container">
+        <CardList />
+      </section>
+    </main>
+  );
 };
 
 export default Home;
